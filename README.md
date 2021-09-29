@@ -22,3 +22,22 @@ This repo will demonstrate making use of zokrates to generate a zero know proof 
 11. Navigate back to deploy tab and paste verifier inputs
 12. Select down arrow to reveal pasted inputs better 
 13. Click call to test the proof    
+
+
+Run Zokrates
+1. docker run -v <path to your project folder>:/home/zokrates/code -ti zokrates/zokrates /bin/bash
+
+Compile Zokrates program
+2. /path/to/zokrates compile -i <program_name>.code
+
+Generate the trusted setup
+3. /path/to/zokrates setup
+
+Compute Witness
+4. /path/to/zokrates compute-witness -a <a> <b> ... <n>
+
+Generate Proof
+5. /path/to/zokrates generate-proof
+
+Export Verifier
+6. path/to/zokrates export-verifier
